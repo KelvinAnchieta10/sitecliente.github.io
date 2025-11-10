@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Entregas rápidas, seguras e sem complicação</title>
 
   <!-- SEO básico -->
-  <meta name="description" content="Operação de entregas moderna com rastreamento em tempo real, protocolos digitais e comunicação eficiente com o destinatário.">
+  <meta name="description"
+    content="Operação de entregas moderna com rastreamento em tempo real, protocolos digitais e comunicação eficiente com o destinatário.">
   <meta name="keywords" content="logística, entregas, rastreamento, motoboy, transportadora, last mile">
 
   <!-- CSS principal -->
@@ -15,6 +17,16 @@
   <!-- Favicon e logo do cliente: substitua o arquivo abaixo -->
   <!-- <link rel="icon" href="./imagens/Logo com Bluemap.png" type="logo" /> -->
 </head>
+
+<script>
+  const btn = document.querySelector('.menu-toggle');
+  const list = document.getElementById('nav');
+  btn?.addEventListener('click', () => {
+    const opened = list.classList.toggle('open');
+    btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+  });
+</script>
+
 <body>
   <!-- ===== NAVBAR ===== -->
   <header class="header">
@@ -22,14 +34,19 @@
       <a href="#inicio" class="logo" aria-label="Página inicial">
         <!-- Troque por ./imagens/logo-cliente.png -->
         <img src="./imagens/Logo com Bluemap.png" alt="Logo da empresa">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav">☰ Menu</button>
       </a>
       <ul class="nav-links">
         <li><a href="#inicio">Início</a></li>
         <li><a href="#vantagens">Vantagens</a></li>
         <li><a href="#como-funciona">Como funciona</a></li>
         <li><a href="#sobre">Sobre</a></li>
-        <li><a class="btn-login" href="https://solicitacao.bluemap.com.br/?chave=ruQlYErGg3HuXMNceBTy7pO1PIg61TBUc9QezirQZ24="target="_blank">Área do Cliente</a></li>
-      </ul>
+        <li><a class="btn-login"
+            href="https://solicitacao.bluemap.com.br/?chave=ruQlYErGg3HuXMNceBTy7pO1PIg61TBUc9QezirQZ24="
+            target="_blank">Área do Cliente</a></li>
+        <ul id="nav" class="nav-links">
+          ...
+        </ul>
     </nav>
   </header>
 
@@ -44,7 +61,8 @@
           visibilidade total e comunicação direta entre todos os envolvidos.
         </p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="https://solicitacao.bluemap.com.br/solicitacao/"target="_blank">Solicitar orçamento</a>
+          <a class="btn-primary" href="https://solicitacao.bluemap.com.br/solicitacao/" target="_blank">Solicitar
+            orçamento</a>
           <a class="btn-secondary" href="#vantagens">Ver vantagens</a>
         </div>
         <ul class="hero-bullets">
@@ -126,7 +144,7 @@
   <section id="galeria" class="galeria">
     <div class="container">
       <h2>Operação em ação</h2>
-     
+
       <div class="gallery-grid">
         <figure class="gallery-card">
           <img src="./imagens/Rastreamento.png" alt="Comunicação e rastreamento">
@@ -175,9 +193,12 @@
       <p>Fale com a nossa equipe e veja na prática como podemos ajudar.</p>
       <div class="cta-actions">
         <!-- Ajuste o telefone e WhatsApp do cliente -->
-        <a class="btn-primary" href="https://wa.me/5511940830987?text=Olá, quero saber mais sobre o sistema Bluemap
-" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-        <a class="btn-secondary" href="mailto:comercial@bluemap.com.br">Enviar e-mail</a>
+        <a class="btn-primary"
+          href="https://wa.me/5511940830987?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20sistema%20Bluemap"
+          target="_blank" rel="noopener">
+          Chamar no WhatsApp
+        </a>
+
       </div>
     </div>
   </section>
@@ -189,4 +210,5 @@
     </div>
   </footer>
 </body>
+
 </html>
